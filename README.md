@@ -1,18 +1,16 @@
 # IU---assignment-software-regression 
+# Project Structure
 
+```text
 regression_assignment/
-│
-├── .git/                      <-- Tool: Version Control (Hidden folder)
-│
+├── .git/                        <-- Tool: Version Control (Hidden folder)
 ├── .github/
 │   └── workflows/
-│       └── ci.yml             <-- Tool: CI/CD Pipeline (GitHub Actions robot)
-│
+│       └── ci.yml               <-- Tool: CI/CD Pipeline (GitHub Actions robot)
 ├── app/
 │   ├── __init__.py
-│   └── store.py               <-- Your Application Code (Modules A and B)
-│
-└── tests/                     <-- Process: TDD & Test Pyramid
+│   └── store.py                 <-- The Application Code (Modules A and B)
+└── tests/                       <-- Process: TDD & Test Pyramid
     ├── __init__.py
-    ├── test_unit.py           <-- Base of Pyramid: Tests the "Plug"
-    └── test_integration.py    <-- Middle of Pyramid: Tests the "Handshake"
+    ├── test_unit.py             
+    └── test_integration.py      
