@@ -1,0 +1,21 @@
+name: Regression Test Pipeline
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.13'
+          
+      - name: Install PyTest
+        run: pip install pytest
+        
+      - name: Run Regression Suite (Unit & Integration)
+        # This command runs all our tests. If one fails, the pipeline stops!
+        run: pytest tests/
